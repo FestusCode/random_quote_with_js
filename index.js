@@ -10,6 +10,22 @@ function getData() {
     });
 }
 getData();
+function changeColor() {
+  let colors = [
+    "#FF4B4B",
+    "#FF7F50",
+    "#B22222",
+    "#FF69B4",
+    "#0040ff",
+    "#CC9966",
+    "#CC6600",
+    "#CC3300",
+    "#FF6600",
+  ];
+    let color = colors[Math.floor(Math.random() * colors.length)];
+    console.log(color);
+}
+changeColor();
 addEventListener("click", () => {
   getData();
 });
