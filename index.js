@@ -1,6 +1,8 @@
 let quote = document.querySelector("#quote");
 let author = document.querySelector("#author");
 let btn = document.querySelector("#btn");
+body = document.querySelector("body");
+quote_block = document.querySelector(".quote_block");
 function getData() {
   fetch("https://api.quotable.io/random")
     .then((response) => response.json())
@@ -22,10 +24,12 @@ function changeColor() {
     "#CC3300",
     "#FF6600",
   ];
-    let color = colors[Math.floor(Math.random() * colors.length)];
-    console.log(color);
+  let color = colors[Math.floor(Math.random() * colors.length)];
+  body.style.backgroundColor = color;
+  quote_block.style.color = color;
 }
-changeColor();
+
 addEventListener("click", () => {
   getData();
+  changeColor();
 });
