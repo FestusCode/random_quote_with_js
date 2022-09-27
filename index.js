@@ -27,6 +27,7 @@ function changeColor() {
   let color = colors[Math.floor(Math.random() * colors.length)];
   body.style.backgroundColor = color;
   quote_block.style.color = color;
+  btn.style.backgroundColor = color;
 }
 
 addEventListener("click", () => {
